@@ -1,18 +1,23 @@
 {
   "name": "phonebook",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Phonebook Capacitor App",
+  "main": "backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon backend/server.js",
+    "build": "echo 'No frontend build step required'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "nodemon": "^3.1.7"
+  },
   "dependencies": {
-    "@capacitor/android": "^8.5.3",
-    "@capacitor/cli": "^8.5.3",
-    "@capacitor/core": "^8.5.3"
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "express": "^4.21.1"
   }
 }
