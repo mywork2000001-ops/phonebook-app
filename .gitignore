@@ -1,0 +1,17 @@
+# Node dependencies
+node_modules/
+backend/contacts.json
+
+# Built files
+*.apk
+*.aab
+
+# Gradle & Android caches
+.gradle/
+build/
+android/app/build/
+android/.gradle/
+android/build/
+local.properties
+.idea/
+*.iml

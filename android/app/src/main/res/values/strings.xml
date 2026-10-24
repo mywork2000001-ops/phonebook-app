@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Phonebook</string>
+    <string name="title_activity_main">Phonebook</string>
+    <string name="package_name">com.phonebook.app</string>
+    <string name="custom_url_scheme">com.phonebook.app</string>
+</resources>

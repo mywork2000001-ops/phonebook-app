@@ -1,0 +1,152 @@
+body { 
+    font-family: Arial, sans-serif; 
+    max-width: 450px; 
+    margin: 20px auto; 
+    padding: 0 15px; 
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Навигация табов */
+.tabs-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e4e7eb;
+    color: #495057;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Скрытие неактивных секций */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Карточки блоков управления */
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.edit-card {
+    background: #fff8e1;
+    border-color: #ffe082;
+}
+
+/* Поля ввода и кнопки */
+input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-green { background-color: #28a745; color: white; width: 100%; }
+.btn-yellow { background-color: #ffc107; color: #212529; flex: 1; }
+.btn-gray { background-color: #6c757d; color: white; flex: 1; }
+.btn-red { background-color: #dc3545; color: white; width: 100%; margin-bottom: 12px; }
+
+/* Списки */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    word-break: break-all;
+}
+
+li.empty {
+    color: #888;
+    justify-content: center;
+}
+
+/* Чекбоксы и действия */
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.item-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.action-btn:hover {
+    transform: scale(1.15);
+}

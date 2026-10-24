@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телефонный справочник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>☎️ Телефонный справочник</h2>
+
+    <!-- Навигационные вкладки -->
+    <div class="tabs-nav">
+        <button id="tabViewBtn" class="tab-btn active">📋 Контакты</button>
+        <button id="tabManageBtn" class="tab-btn">⚙️ Управление</button>
+    </div>
+
+    <!-- РАЗДЕЛ 1: Только просмотр и поиск -->
+    <section id="viewTab" class="tab-content active">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="🔍 Поиск по имени или номеру...">
+        </div>
+        <ul id="viewContactsList"></ul>
+    </section>
+
+    <!-- РАЗДЕЛ 2: Управление (Создание, Редактирование, Удаление) -->
+    <section id="manageTab" class="tab-content">
+        <!-- Блок синхронизации с сервером -->
+<div class="card sync-card">
+    <h3>🔄 Синхронизация с сервером (ПК)</h3>
+    <input type="text" id="serverIpInput" placeholder="IP компьютера, напр. 192.168.1.5:8080">
+    <div class="buttons-group">
+        <button id="uploadBtn" class="btn-blue">📤 Выгрузить в JSON</button>
+        <button id="downloadBtn" class="btn-blue">📥 Скачать из JSON</button>
+    </div>
+</div>
+        <!-- Блок добавления контакта -->
+        <div id="createSection" class="card">
+            <h3>➕ Добавить контакт</h3>
+            <form id="contactForm">
+                <input type="text" id="nameInput" placeholder="Имя" required>
+                <input type="tel" id="phoneInput" placeholder="Телефон" required>
+                <button type="submit" class="btn-green">Сохранить контакт</button>
+            </form>
+        </div>
+
+        <!-- Блок редактирования (скрыт по умолчанию) -->
+        <div id="editSection" class="card edit-card" style="display: none;">
+            <h3>✏️ Редактирование контакта</h3>
+            <input type="hidden" id="editId">
+            <div class="form-group">
+                <input type="text" id="editNameInput" placeholder="Новое имя" required>
+                <input type="tel" id="editPhoneInput" placeholder="Новый телефон" required>
+                <div class="buttons-group">
+                    <button id="saveEditBtn" class="btn-yellow">Сохранить</button>
+                    <button id="cancelEditBtn" class="btn-gray">Отмена</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Список для удаления и выбора редактирования -->
+        <div class="management-list-wrapper">
+            <h3>Список для управления</h3>
+            
+            <button id="deleteSelectedBtn" class="btn-red" style="display: none;">
+                🗑️ Удалить выбранные (<span id="selectedCount">0</span>)
+            </button>
+
+            <ul id="manageContactsList"></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
